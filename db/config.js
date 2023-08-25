@@ -2,7 +2,10 @@ const { config } = require('./../config/config');
 
 module.exports = {
   development: {
-    url: config.dbUrl,
+    username: 'nico',
+    password: 'admin123',
+    database: 'my_store',
+    host: 'localhost',
     dialect: 'postgres',
   },
   production: {
@@ -10,8 +13,8 @@ module.exports = {
     dialect: 'postgres',
     dialectOptions: {
       ssl: {
-        rejectUnauthorized: false
-      }
-    }
-  }
-}
+        rejectUnauthorized: false,
+      },
+    },
+  },
+};
